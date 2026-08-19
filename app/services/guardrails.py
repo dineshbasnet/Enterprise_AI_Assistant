@@ -26,22 +26,3 @@ _INJECTION_PATTERNS = [
 ]
 
 
-class Guardrails:
-    async def check_input(self, text: str) -> GuardrailResult:
-        with logfire.span("guardrails.check_input"):
-            for pattern in _INJECTION_PATTERNS:
-                if pattern.search(text):
-                    logfire.warning("Prompt injection detected", text=text[:100])
-                    return GuardrailResult(passed=False, reason="Potential prompt injection detected.")
-
-            cleaned = text
-            for pattern, replacement in _PII_PATTERNS:
-                cleaned = pattern.sub(replacement, cleaned)
-
-            return GuardrailResult(passed=True, modified_input=cleaned)
-
-    async def check_output(self, text: str) -> GuardrailResult:
-        with logfire.span("guardrails.check_output"):
-            if len(text.strip()) < 2:
-                return GuardrailResult(passed=False, reason="Empty or too-short response.")
-            return GuardrailResult(passed=True, modified_input=text)
