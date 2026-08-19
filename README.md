@@ -348,16 +348,16 @@ This project follows an **Agile development methodology** with iterative 6-sprin
 
 | Name | Role |
 |---|---|
-| Dinesh Basnet | Backend & Agent Orchestration |
-| Aaditya Prasad Ghimire | Document Processing & OCR Pipeline |
-| Krishna Kusiyait Yadav | Frontend & Chat Widget |
+| Dinesh Basnet | RAG & Agent Orchestration |
+| Krishna Kusiyait Yadav |Backend, Document Processing & OCR Pipeline |
+| Aaditya Prasad Ghimire | Frontend & Chat Widget |
 | Ravi Shiwakoti | Support Agent & Analytics |
 
 **Department of Computer and Electronics & Communication Engineering**
 Kathford International College of Engineering and Management
 Affiliated to Tribhuvan University
 
----
+--- 
 
 ## License
 
