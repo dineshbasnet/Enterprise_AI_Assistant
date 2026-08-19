@@ -1,0 +1,56 @@
+
+.env
+.env.local
+.env.test
+.env.*.local
+*.pem
+*.key
+*.secret
+# Alembic config often contains DB URLs; ignore real config, keep template
+alembic.ini
+!alembic.ini.dist
+!alembic.ini.template
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+__pypackages__/
+
+# --- Python Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# --- Alembic Specifics ---
+# DO NOT ignore the 'alembic/versions' folder! 
+# Migration scripts must be version controlled.
+# Only ignore local development databases or scratch files.
+*.db
+*.sqlite3
+test.db
+tmp.db
+alembic/scratch/
+alembic/scratch_test_*/
+
+# --- Testing & Coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.log
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db   
